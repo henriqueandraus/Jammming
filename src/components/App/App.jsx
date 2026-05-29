@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
+import Spotify from '../../utils/Spotify';
 import styles from './App.module.css';
 
 const mockTracks = [
@@ -14,6 +15,10 @@ function App() {
   const [searchResults, setSearchResults] = useState(mockTracks);
   const [playlistName, setPlaylistName] = useState("My Playlist");
   const [playlistTracks, setPlaylistTracks] = useState([]);
+
+  useEffect(() => {
+    Spotify.getAccessToken();
+  }, []);
 
   function addTrack(track) {
     if (playlistTracks.find(t => t.id === track.id)) return;
@@ -28,7 +33,6 @@ function App() {
     const trackURIs = playlistTracks.map(t => t.uri);
     console.log("Saving playlist:", playlistName);
     console.log("Track URIs:", trackURIs);
-    
     setPlaylistName("My Playlist");
     setPlaylistTracks([]);
   }
