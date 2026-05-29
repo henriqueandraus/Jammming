@@ -2,13 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 0;
+  padding: 24px 0;
   border-bottom: 1px solid #3e3e3e;
+}
+
+.trackInfo {
+  text-align: left;
 }
 
 .trackInfo h3 {
   margin: 0;
   font-size: 16px;
+  color: #fff;
 }
 
 .trackInfo p {

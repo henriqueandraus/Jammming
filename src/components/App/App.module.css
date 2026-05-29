@@ -4,7 +4,13 @@
   padding: 24px;
   color: #fff;
   font-family: sans-serif;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
 }
+
 
 .title {
   text-align: center;
