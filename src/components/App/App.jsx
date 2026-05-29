@@ -12,7 +12,8 @@ const mockTracks = [
 
 function App() {
   const [searchResults, setSearchResults] = useState(mockTracks);
-  const [playlistTracks, setPlaylistTracks] = useState([]);
+  const [playlistName, setPlaylistName] = useState("My Playlist");
+  const [playlistTracks, setPlaylistTracks] = useState(mockTracks);
 
   return (
     <div className={styles.app}>
@@ -20,7 +21,11 @@ function App() {
       <SearchBar />
       <div className={styles.content}>
         <SearchResults searchResults={searchResults} />
-        <Playlist playlistTracks={playlistTracks} />
+        <Playlist
+          playlistName={playlistName}
+          playlistTracks={playlistTracks}
+          onNameChange={setPlaylistName}
+        />
       </div>
     </div>
   );
