@@ -1,0 +1,14 @@
+.searchResults {
+  flex: 1;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.searchResults h2 {
+  color: #fff;
+  margin-top: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

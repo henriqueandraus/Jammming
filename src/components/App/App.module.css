@@ -1,0 +1,23 @@
+.app {
+  background-color: #121212;
+  min-height: 100vh;
+  padding: 24px;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 48px;
+  color: #1db954;
+  margin-bottom: 24px;
+}
+
+.title span {
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  gap: 24px;
+}

@@ -1,0 +1,5 @@
+.tracklist {
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 0 16px;
+}

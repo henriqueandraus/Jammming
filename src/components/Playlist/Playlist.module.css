@@ -1,0 +1,36 @@
+.playlist {
+  flex: 1;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.playlistName {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 16px;
+  outline: none;
+  width: 100%;
+}
+
+.saveButton {
+  background-color: #1db954;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 16px;
+  padding: 12px 24px;
+  align-self: center;
+}
+
+.saveButton:hover {
+  background-color: #19a349;
+}
