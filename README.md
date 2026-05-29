@@ -1,16 +1,52 @@
-# React + Vite
+# Jammming
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Jammming is a React web application that connects to the Spotify API, allowing users to search for songs and build custom playlists that can be saved directly to their Spotify account.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[https://jammming-gray.vercel.app](https://jammming-gray.vercel.app)
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 18
+- Vite
+- JavaScript (ES6+)
+- CSS Modules
+- Spotify Web API
+- Vercel
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Search for songs by title, artist, or album
+- View song details including title, artist, and album name
+- Add songs to a custom playlist
+- Remove songs from the playlist
+- Rename the playlist
+- Save the playlist to your Spotify account
+
+## Getting Started
+
+To run this project locally, you will need Node.js installed and a Spotify account.
+
+Clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/henriqueandraus/Jammming.git
+cd Jammming
+npm install
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Future Work
+
+- Display album artwork for each track
+- Add audio preview for songs
+- Allow searching by genre or mood
+- Improve mobile responsiveness
+- Support editing existing Spotify playlists
+
+## Author
+
+Henrique Andraus
