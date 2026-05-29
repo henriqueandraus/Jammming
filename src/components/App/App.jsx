@@ -13,18 +13,28 @@ const mockTracks = [
 function App() {
   const [searchResults, setSearchResults] = useState(mockTracks);
   const [playlistName, setPlaylistName] = useState("My Playlist");
-  const [playlistTracks, setPlaylistTracks] = useState(mockTracks);
+  const [playlistTracks, setPlaylistTracks] = useState([]);
+
+  function addTrack(track) {
+    if (playlistTracks.find(t => t.id === track.id)) return;
+    setPlaylistTracks(prev => [...prev, track]);
+  }
+
+  function removeTrack(track) {
+    setPlaylistTracks(prev => prev.filter(t => t.id !== track.id));
+  }
 
   return (
     <div className={styles.app}>
       <h1 className={styles.title}>Ja<span>mmm</span>ing</h1>
       <SearchBar />
       <div className={styles.content}>
-        <SearchResults searchResults={searchResults} />
+        <SearchResults searchResults={searchResults} onAdd={addTrack} />
         <Playlist
           playlistName={playlistName}
           playlistTracks={playlistTracks}
           onNameChange={setPlaylistName}
+          onRemove={removeTrack}
         />
       </div>
     </div>

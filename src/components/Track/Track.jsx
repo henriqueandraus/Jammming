@@ -1,13 +1,18 @@
 import styles from './Track.module.css';
 
-function Track({ track }) {
+function Track({ track, onAdd, onRemove }) {
   return (
     <div className={styles.track}>
       <div className={styles.trackInfo}>
         <h3>{track.name}</h3>
         <p>{track.artist} | {track.album}</p>
       </div>
-      <button className={styles.trackAction}>+</button>
+      {onAdd && (
+        <button className={styles.trackAction} onClick={() => onAdd(track)}>+</button>
+      )}
+      {onRemove && (
+        <button className={styles.trackAction} onClick={() => onRemove(track)}>-</button>
+      )}
     </div>
   );
 }
