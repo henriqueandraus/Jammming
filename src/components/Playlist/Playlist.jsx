@@ -1,7 +1,7 @@
 import Tracklist from '../Tracklist/Tracklist';
 import styles from './Playlist.module.css';
 
-function Playlist({ playlistName, playlistTracks, onNameChange, onRemove }) {
+function Playlist({ playlistName, playlistTracks, onNameChange, onRemove, onSave }) {
   return (
     <div className={styles.playlist}>
       <input
@@ -10,7 +10,7 @@ function Playlist({ playlistName, playlistTracks, onNameChange, onRemove }) {
         onChange={e => onNameChange(e.target.value)}
       />
       <Tracklist tracks={playlistTracks} onRemove={onRemove} />
-      <button className={styles.saveButton}>Save To Spotify</button>
+      <button className={styles.saveButton} onClick={onSave}>Save To Spotify</button>
     </div>
   );
 }

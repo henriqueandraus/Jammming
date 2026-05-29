@@ -5,9 +5,9 @@ import Playlist from '../Playlist/Playlist';
 import styles from './App.module.css';
 
 const mockTracks = [
-  { id: 1, name: "Blinding Lights", artist: "The Weeknd", album: "After Hours" },
-  { id: 2, name: "Levitating", artist: "Dua Lipa", album: "Future Nostalgia" },
-  { id: 3, name: "Stay", artist: "Kid LAROI", album: "F*CK LOVE" },
+  { id: 1, name: "Blinding Lights", artist: "The Weeknd", album: "After Hours", uri: "spotify:track:0VjIjW4GlUZAMYd2vXMi3b" },
+  { id: 2, name: "Levitating", artist: "Dua Lipa", album: "Future Nostalgia", uri: "spotify:track:463CkQjx2Zk1yXoBuierM9" },
+  { id: 3, name: "Stay", artist: "Kid LAROI", album: "F*CK LOVE", uri: "spotify:track:5HCyWlXZPP0y6Gqq8TgA20" },
 ];
 
 function App() {
@@ -24,6 +24,15 @@ function App() {
     setPlaylistTracks(prev => prev.filter(t => t.id !== track.id));
   }
 
+  function savePlaylist() {
+    const trackURIs = playlistTracks.map(t => t.uri);
+    console.log("Saving playlist:", playlistName);
+    console.log("Track URIs:", trackURIs);
+    
+    setPlaylistName("My Playlist");
+    setPlaylistTracks([]);
+  }
+
   return (
     <div className={styles.app}>
       <h1 className={styles.title}>Ja<span>mmm</span>ing</h1>
@@ -35,6 +44,7 @@ function App() {
           playlistTracks={playlistTracks}
           onNameChange={setPlaylistName}
           onRemove={removeTrack}
+          onSave={savePlaylist}
         />
       </div>
     </div>
